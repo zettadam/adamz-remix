@@ -1,0 +1,74 @@
+@layer app {
+  :where(form.post) {
+    accent-color: var(--color-posts);
+  }
+
+  form.post {
+    & fieldset {
+      border: 0;
+      border-top: 1px solid hsl(0, 0%, 50%);
+      margin-block: 1rem;
+      padding: 1rem;
+    }
+    & legend {
+      padding-inline: 1rem;
+    }
+
+    & .form-grid {
+      grid-template-areas: 
+        "title abstract"
+        "slug abstract"
+        "published abstract"
+        "significance abstract"
+        ". abstract"
+        "body body";
+
+      & label.title {
+        grid-area: title;
+      }
+      & label.slug {
+        grid-area: slug;
+      }
+      & label.published-on {
+        grid-area: published;
+      }
+      & label.significance {
+        grid-area: significance;
+      }
+      & .text-editor {
+        & label {
+          margin-bottom: 0.5rem;
+        }
+      }
+      
+      & div.abstract {
+        grid-area: abstract;
+        & .tiptap {
+          min-height: 20dvh;
+        }
+      }
+      & div.body {
+        grid-area: body;
+        & .tiptap {
+          min-height: 50dvh;
+        }
+      }
+    }
+
+    & input[type=range] {
+      &:-webkit-slider-runnable-track { }
+      &:-moz-range-track { }
+      &:-ms-track { }
+    }
+
+    & footer {
+      display: flex;
+      gap: 1rem;
+      margin-block: 1rem;
+
+      & button:first-of-type {
+        margin-inline: 0 auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@layer app {
+  form.code-snippet {
+    fieldset {
+      border: 0;
+      border-top: 1px solid hsl(0, 0%, 50%);
+      margin-block: 1rem;
+      padding: 1rem;
+    }
+
+    legend {
+      padding-inline: 1rem;
+    }
+
+    label {
+      display: grid;
+
+      b.label {
+        font-weight: normal;
+      }
+    }
+
+    .form-grid {
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+      column-gap: 3rem;
+      row-gap: 1rem;
+
+      .title {
+        grid-column: 1/6;
+        grid-row: 1/2;
+      }
+
+      .description {
+        grid-column: 1/6;
+        grid-row: 2/3;
+      }
+      .text-editor.description {
+        .tiptap {
+          min-height: 30dvh;
+        }
+      }
+
+      .body {
+        grid-column: 6/13;
+        grid-row: 1/13;
+      }
+      .text-editor.body {
+        .tiptap {
+          min-height: 50dvh;
+        }
+      }
+    }
+  }
+}

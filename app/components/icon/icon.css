@@ -1,0 +1,45 @@
+@layer component {
+  .icon {
+    pointer-events: none;
+
+    /* Sizes */
+    &.icon--xs {
+      height: 12px;
+      width: 12px;
+    }
+    &.icon--sm {
+      height: 16px;
+      width: 16px;
+    }
+    &.icon--md {
+      height: 24px;
+      width: 24px;
+    }
+    &.icon--lg {
+      height: 32px;
+      width: 32px;
+    }
+    &.icon--xl {
+      height: 48px;
+      width: 48px;
+    }
+    &.icon--xxl {
+      height: 64px;
+      width: 64px;
+    }
+
+    /* Types */
+    &.icon--info {
+      color: var(--info-color, blue);
+    }
+    &.icon--warning {
+      color: var(--warning-color, orange);
+    }
+    &.icon--error {
+      color: var(--danger-color, red);
+    }
+    &.icon--success {
+      color: var(--success-color, green);
+    }
+  }
+}

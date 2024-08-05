@@ -1,0 +1,12 @@
+@layer app {
+  .tasks-layout {
+    a.create {
+      background-color: var(--color-tasks-a50);
+      color: white;
+    }
+
+    div.page {
+      border-top: 0.25rem solid var(--color-tasks-a50);
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@layer app {
+  .code-layout {
+    a.create {
+      background-color: var(--color-code-a50);
+      color: white;
+    }
+
+    div.page {
+      border-top: 0.25rem solid var(--color-code-a50);
+    }
+
+    form {
+      .label {
+        color: var(--color-code);
+      }
+
+      input[type='text'],
+      select,
+      .text-editor .tiptap,
+      .code-editor {
+        background-color: white;
+        border-color: var(--color-code);
+        border-style: solid;
+        border-width: 1px;
+      }
+
+      select {
+        border-radius: 0.25rem;
+      }
+
+      input[type='text'],
+      select {
+        padding: 0.5rem;
+      }
+    }
+
+    main .code-editor {
+      margin-block: 2rem;
+    }
+  }
+}

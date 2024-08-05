@@ -1,0 +1,62 @@
+@layer app {
+  :where(form.note) {
+    accent-color: var(--color-notes);
+  }
+
+  form.note {
+    fieldset {
+      border: 0;
+      border-top: 1px solid var(--color-notes);
+      margin-block: 1rem;
+      padding: 1rem;
+    }
+    legend {
+      padding-inline: 1rem;
+    }
+
+    & .form-grid {
+      grid-template-areas: 
+        "title body"
+        "published body"
+        "significance body"
+        ". body";
+
+      & label.title {
+        grid-area: title;
+      }
+      & label.slug {
+        grid-area: slug;
+      }
+      & label.published-on {
+        grid-area: published;
+      }
+      & label.significance {
+        grid-area: significance;
+      }
+      & .text-editor {
+        & label {
+          margin-bottom: 0.5rem;
+        }
+      }
+      
+      & div.abstract {
+        grid-area: abstract;
+        & .tiptap {
+          min-height: 20dvh;
+        }
+      }
+      & div.body {
+        grid-area: body;
+        & .tiptap {
+          min-height: 50dvh;
+        }
+      }
+    }
+
+    footer {
+      display: flex;
+      gap: 1rem;
+      margin-block: 1rem;
+    }
+  }
+}

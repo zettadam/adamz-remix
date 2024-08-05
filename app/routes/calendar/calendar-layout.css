@@ -1,0 +1,12 @@
+@layer app {
+  .calendar-layout {
+    a.create {
+      background-color: var(--color-calendar-a50);
+      color: white;
+    }
+
+    div.page {
+      border-top: 0.25rem solid var(--color-calendar-a50);
+    }
+  }
+}

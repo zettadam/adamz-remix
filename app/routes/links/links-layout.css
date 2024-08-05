@@ -1,0 +1,12 @@
+@layer app {
+  .links-layout {
+    a.create {
+      background-color: var(--color-links-a50);
+      color: white;
+    }
+
+    div.page {
+      border-top: 0.25rem solid var(--color-links-a50);
+    }
+  }
+}

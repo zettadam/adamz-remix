@@ -1,0 +1,12 @@
+@layer app {
+  .notes-layout {
+    a.create {
+      background-color: var(--color-notes-a50);
+      color: white;
+    }
+
+    div.page {
+      border-top: 0.25rem solid var(--color-notes-a50);
+    }
+  }
+}

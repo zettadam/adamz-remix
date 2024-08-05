@@ -1,0 +1,26 @@
+@layer app {
+  .posts-layout {
+    width: 100%;
+
+    & :focus-visible {
+      background-color: var(--color-posts-a125);
+      outline: 1px solid var(--color-posts);
+    }
+
+    & input[type=text],
+    & input[type=date],
+    & input[type=datetime],
+    & input[type=datetime-local] {
+      border: 1px solid var(--color-posts);
+    }
+
+    & a.create {
+      background-color: var(--color-posts-a50);
+      color: white;
+    }
+
+    & div.page {
+      border-top: 0.25rem solid var(--color-posts-a50);
+    }
+  }
+}
