@@ -29,7 +29,7 @@ export default function NotesIndexPage({
 
   return (
     <div className={`page ${className}`} style={style}>
-      <h3>Latest Notes</h3>
+      <h3>Latest notes</h3>
       <NoteListBasic data={data} />
     </div>
   )

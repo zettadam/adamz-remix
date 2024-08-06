@@ -75,6 +75,17 @@ export default function CodeSnippetForm({
             name="description"
           />
 
+          <label className="vertical published-on">
+            Published on
+            <input
+              type="datetime-local"
+              name="published_at"
+              defaultValue={
+                data?.published_at ? data.published_at.substring(0, 16) : ''
+              }
+            />
+          </label>
+
           <label className="language">
             <b className="label">Language</b>
             <select name="language" defaultValue={data?.language ?? ''}>

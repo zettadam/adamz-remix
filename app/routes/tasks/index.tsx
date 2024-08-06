@@ -15,6 +15,7 @@ export default function TasksPage({
 }): JSX.Element {
   return (
     <div className={`page ${className}`} style={style}>
+      <h3>Latest tasks</h3>
       <p>Tasks will be shown here.</p>
     </div>
   )

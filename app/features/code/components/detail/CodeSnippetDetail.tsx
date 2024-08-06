@@ -4,6 +4,7 @@ import { type Extension, useCodeMirror } from '@uiw/react-codemirror'
 import { langs } from '@uiw/codemirror-extensions-langs'
 
 import type { CodeSnippet } from '../../types'
+import HtmlContent from '~/components/html-content/HtmlContent'
 
 const extensions: Record<string, () => Extension> = {
   html: langs.html,
@@ -42,7 +43,7 @@ export default function CodeSnippetDetail({ data }: { data: CodeSnippet }) {
         <p>
           <Link to={`/code/${params.id}/edit`}>Edit</Link>
         </p>
-        {data.description || null}
+        {data.description ? <HtmlContent content={data.description} /> : null}
       </header>
 
       <div ref={editor} className="code-editor" />

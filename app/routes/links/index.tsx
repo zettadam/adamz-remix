@@ -15,6 +15,7 @@ export default function LinksPage({
 }): JSX.Element {
   return (
     <div className={`page ${className}`} style={style}>
+      <h3>Latest links</h3>
       <p>Links will be shown here.</p>
     </div>
   )

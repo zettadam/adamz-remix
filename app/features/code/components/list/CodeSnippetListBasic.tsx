@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Link } from '@remix-run/react'
 
+import HtmlContent from '~/components/html-content/HtmlContent'
 import type { CodeSnippet } from '~/features/code/types'
 
 export function CodeSnippetListBasic({
@@ -15,14 +16,15 @@ export function CodeSnippetListBasic({
   return (
     <div className={className} style={style}>
       {Array.isArray(data) ? (
-        data.map((n) => (
-          <article key={n.id}>
+        data.map((s) => (
+          <article key={s.id}>
             <h4>
-              <Link to={`/code/${n.id}`}>{n.title}</Link>
+              <Link to={`/code/${s.id}`}>{s.title}</Link>
             </h4>
+            {s.description ? <HtmlContent content={s.description} /> : null}
             <p>
-              Written on {n.created_at} |{' '}
-              <Link to={`/code/${n.id}/edit`}>Edit</Link>
+              Written on {s.created_at} |{' '}
+              <Link to={`/code/${s.id}/edit`}>Edit</Link>
             </p>
           </article>
         ))

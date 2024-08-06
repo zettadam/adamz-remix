@@ -29,6 +29,7 @@ export default function PostsPage({
 
   return (
     <div className={`page ${className}`} style={style}>
+      <h3>Latest posts</h3>
       <PostListBasic data={data} />
     </div>
   )
