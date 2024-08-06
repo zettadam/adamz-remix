@@ -1,41 +1,47 @@
 @layer app {
   .code-layout {
-    a.create {
+    & nav.page {
+      background-color: var(--color-code-a50);
+    }
+
+    & a.create {
       background-color: var(--color-code-a50);
       color: white;
     }
 
-    div.page {
+    & div.page {
       border-top: 0.25rem solid var(--color-code-a50);
     }
 
-    form {
-      .label {
+    & form {
+      & .label {
         color: var(--color-code);
       }
 
-      input[type='text'],
-      select,
-      .text-editor .tiptap,
-      .code-editor {
+      & input[type='text'],
+      & select,
+      & .text-editor .tiptap,
+      & .code-editor {
         background-color: white;
         border-color: var(--color-code);
         border-style: solid;
         border-width: 1px;
       }
 
-      select {
+      & select {
         border-radius: 0.25rem;
       }
 
-      input[type='text'],
-      select {
+      & input[type='text'],
+      & select {
         padding: 0.5rem;
       }
     }
 
-    main .code-editor {
-      margin-block: 2rem;
+    & main {
+      & .code-editor {
+        margin-block: 2rem;
+      }
     }
   }
 }

@@ -108,6 +108,7 @@
     & > header {
       border-radius: 0.5rem;
       margin: 0 0 1rem 0;
+      min-height: 20rem;
       padding-block: 0;
 
       & > hgroup {
@@ -158,23 +159,26 @@
     }
 
     & nav.page {
-      background-color: hsla(0, 0%, 100%, 0.75);
       align-items: center;
       display: flex;
       gap: 1rem;
       justify-content: flex-end;
-      margin: 0 5dvw 1rem auto;
+      margin: 0 5dvw 0 auto;
       padding: 0.5rem;
       width: fit-content;
 
       & a {
         display: block;
+        &:link,
+        &:visited {
+          color: white;
+        }
       }
 
       & input[type='search'] {
-        background-color: rgba(240, 229, 125, 0.5);
+        background-color: white;
         border: 1px solid var(--color-primary);
-        padding: 0.125rem 0.25rem;
+        padding: 0.25rem 0.25rem;
       }
     }
 
@@ -207,10 +211,10 @@
           }
         }
 
-        & input[type=text],
-        & input[type=number],
-        & input[type=date],
-        & input[type=datetime-local] {
+        & input[type='text'],
+        & input[type='number'],
+        & input[type='date'],
+        & input[type='datetime-local'] {
           font-family: var(--font-serif);
           font-size: var(--text-size-1);
           margin: 0;

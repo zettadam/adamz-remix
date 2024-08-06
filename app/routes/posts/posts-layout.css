@@ -2,15 +2,19 @@
   .posts-layout {
     width: 100%;
 
+    & nav.page {
+      background-color: var(--color-posts-a50);
+    }
+
     & :focus-visible {
       background-color: var(--color-posts-a125);
       outline: 1px solid var(--color-posts);
     }
 
-    & input[type=text],
-    & input[type=date],
-    & input[type=datetime],
-    & input[type=datetime-local] {
+    & input[type='text'],
+    & input[type='date'],
+    & input[type='datetime'],
+    & input[type='datetime-local'] {
       border: 1px solid var(--color-posts);
     }
 

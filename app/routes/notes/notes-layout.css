@@ -1,11 +1,20 @@
 @layer app {
   .notes-layout {
-    a.create {
+    & nav.page {
+      background-color: var(--color-notes-a50);
+    }
+
+    & :focus-visible {
+      background-color: var(--color-notes-a125);
+      outline: 1px solid var(--color-notes);
+    }
+
+    & a.create {
       background-color: var(--color-notes-a50);
       color: white;
     }
 
-    div.page {
+    & div.page {
       border-top: 0.25rem solid var(--color-notes-a50);
     }
   }
