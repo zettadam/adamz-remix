@@ -24,7 +24,9 @@
     }
 
     & div.page {
-      border-top: 0.25rem solid var(--color-posts-a50);
+      border-color: var(--color-posts-a50);
+      border-style: solid;
+      border-width: 0.25rem 0 0.0625rem 0;
     }
   }
 }

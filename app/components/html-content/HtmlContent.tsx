@@ -1,5 +1,4 @@
 import * as React from 'react'
-import DomPurify from 'dompurify'
 
 export default function HtmlContent({
   className = '',
@@ -21,7 +20,7 @@ export default function HtmlContent({
     | 'dd'
     | 'span'
 }) {
-  const sanitizedContent = DomPurify.sanitize(content, {})
+  const sanitizedContent = content // FIX: DOMPurify is a commonjs package and fails with Remix ssr
   const safeContent = {
     __html: sanitizedContent,
   }
@@ -31,4 +30,3 @@ export default function HtmlContent({
     dangerouslySetInnerHTML: safeContent,
   })
 }
-

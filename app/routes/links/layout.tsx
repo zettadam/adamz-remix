@@ -18,7 +18,9 @@ export default function LinksLayout({
   return (
     <div className={`links-layout ${className}`} style={style}>
       <nav className="page">
-        <NavLink to="/links">Index</NavLink>
+        <NavLink to="/links" end>
+          Index
+        </NavLink>
         <span className="divider" />
         <NavLink to="/links/archive">Archive</NavLink>
         <span className="divider" />

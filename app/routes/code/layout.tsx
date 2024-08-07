@@ -18,7 +18,9 @@ export default function CodeLayout({
   return (
     <div className={`code-layout ${className}`} style={style}>
       <nav className="page">
-        <NavLink to="/code">Index</NavLink>
+        <NavLink to="/code" end>
+          Index
+        </NavLink>
         <span className="divider" />
         <NavLink to="/code/archive">Archive</NavLink>
         <span className="divider" />

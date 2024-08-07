@@ -18,7 +18,9 @@ export default function PostsLayout({
   return (
     <div className={`posts-layout ${className}`} style={style}>
       <nav className="page">
-        <NavLink to="/posts">Index</NavLink>
+        <NavLink to="/posts" end>
+          Index
+        </NavLink>
         <span className="divider" />
         <NavLink to="/posts/archive">Archive</NavLink>
         <span className="divider" />

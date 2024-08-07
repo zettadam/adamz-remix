@@ -18,7 +18,9 @@ export default function TasksLayout({
   return (
     <div className={`tasks-layout ${className}`} style={style}>
       <nav className="page">
-        <NavLink to="/tasks">Index</NavLink>
+        <NavLink to="/tasks" end>
+          Index
+        </NavLink>
         <span className="divider" />
         <NavLink to="/tasks/archive">Archive</NavLink>
         <span className="divider" />

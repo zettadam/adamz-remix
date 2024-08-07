@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link } from '@remix-run/react'
 
 import HtmlContent from '~/components/html-content/HtmlContent'
+import { DefaultDateTimeFormat as dtf } from '~/helpers/datetime'
 import type { CodeSnippet } from '~/features/code/types'
 
 export function CodeSnippetListBasic({
@@ -23,7 +24,7 @@ export function CodeSnippetListBasic({
             </h4>
             {s.description ? <HtmlContent content={s.description} /> : null}
             <p>
-              Written on {s.created_at} |{' '}
+              Created on {dtf.format(new Date(s.created_at))} |{' '}
               <Link to={`/code/${s.id}/edit`}>Edit</Link>
             </p>
           </article>

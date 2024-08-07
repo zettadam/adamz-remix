@@ -105,6 +105,7 @@
   }
 
   div.main-layout {
+    border-top: 0.5rem solid var(--color-primary);
     & > header {
       border-radius: 0.5rem;
       margin: 0 0 1rem 0;
@@ -172,6 +173,11 @@
         &:link,
         &:visited {
           color: white;
+        }
+        &:hover,
+        &:active,
+        &.active {
+          color: rgba(240, 229, 125);
         }
       }
 

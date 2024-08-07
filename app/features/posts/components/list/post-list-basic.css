@@ -1,0 +1,31 @@
+@layer app {
+  .post-list {
+    &.basic {
+      & article {
+      }
+      & header {
+        & h4 {
+          font-size: var(--text-size-4);
+          margin-block: 0;
+          padding-block: 0;
+        }
+        & p {
+          align-items: center;
+          display: flex;
+          gap: 1rem;
+          font-family: var(--font-sans-serif);
+          margin-block: 0;
+        }
+        & h4,
+        & p {
+          font-family: var(--font-sans-serif);
+        }
+      }
+
+      & button.delete {
+        border-radius: 0.25rem;
+        color: var(--color-danger);
+      }
+    }
+  }
+}

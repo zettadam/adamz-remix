@@ -18,7 +18,9 @@ export default function CalendarLayout({
   return (
     <div className={`calendar-layout ${className}`} style={style}>
       <nav className="page">
-        <NavLink to="/calendar">Index</NavLink>
+        <NavLink to="/calendar" end>
+          Index
+        </NavLink>
         <span className="divider" />
         <NavLink to="/calendar/new" className="create">
           + New event

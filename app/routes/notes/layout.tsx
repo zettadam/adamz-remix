@@ -18,7 +18,9 @@ export default function NotesLayout({
   return (
     <div className={`notes-layout ${className}`} style={style}>
       <nav className="page">
-        <NavLink to="/notes">Index</NavLink>
+        <NavLink to="/notes" end>
+          Index
+        </NavLink>
         <span className="divider" />
         <NavLink to="/notes/archive">Archive</NavLink>
         <span className="divider" />
