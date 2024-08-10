@@ -27,6 +27,13 @@
       border-color: var(--color-posts-a50);
       border-style: solid;
       border-width: 0.25rem 0 0.0625rem 0;
+
+      & > h3 {
+        color: var(--color-posts);
+        font-family: var(--font-sans-serif);
+        font-size: var(--text-size-3);
+        text-transform: uppercase;
+      }
     }
   }
 }

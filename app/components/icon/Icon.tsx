@@ -11,14 +11,14 @@ import './icon.css'
 
 type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
 
-function getDimensions (size: Size = 'md'): number {
+function getDimensions(size: Size = 'md'): number {
   const pixels = {
-    'xs': 12,
-    'sm': 16,
-    'md': 24,
-    'lg': 32,
-    'xl': 64,
-    'xxl': 96
+    xs: 12,
+    sm: 16,
+    md: 24,
+    lg: 32,
+    xl: 64,
+    xxl: 96,
   }
 
   return pixels[size]
@@ -61,7 +61,7 @@ export function Icon({
     }),
     height: measure,
     width: measure,
-    viewBox: `0 0 ${measure} ${measure}`
+    viewBox: `0 0 24 24`,
   }
 
   return (

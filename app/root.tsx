@@ -1,5 +1,6 @@
 import { LinksFunction } from '@remix-run/node'
 import {
+  Link,
   Links,
   Meta,
   NavLink,
@@ -39,7 +40,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
           rel="stylesheet"
         />
 
@@ -52,6 +53,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <h1>Adam Ziolkowski</h1>
               <h2 className={section}>{section}</h2>
             </hgroup>
+            <nav className="secondary">
+              <menu>
+                <li className="news">
+                  <NavLink to="/news">News</NavLink>
+                </li>
+                <li className="feeds">
+                  <NavLink to="/feeds">Feeds</NavLink>
+                </li>
+                <li className="auth">
+                  <Link to="/sign-in">Sign in</Link>
+                </li>
+                <li className="about">
+                  <NavLink to="/about">About</NavLink>
+                </li>
+              </menu>
+            </nav>
           </header>
           {children}
           <footer>
