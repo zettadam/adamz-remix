@@ -19,22 +19,13 @@
       }
 
       & input[type='text'],
+      & input[type='number'],
+      & input[type='date'],
+      & input[type='datetime-local'],
       & select,
       & .text-editor .tiptap,
       & .code-editor {
-        background-color: white;
         border-color: var(--color-code);
-        border-style: solid;
-        border-width: 1px;
-      }
-
-      & select {
-        border-radius: 0.25rem;
-      }
-
-      & input[type='text'],
-      & select {
-        padding: 0.5rem;
       }
     }
 

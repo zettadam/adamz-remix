@@ -17,5 +17,21 @@
     & div.page {
       border-top: 0.25rem solid var(--color-notes-a50);
     }
+
+    & form {
+      & .label {
+        color: var(--color-notes);
+      }
+
+      & input[type='text'],
+      & input[type='number'],
+      & input[type='date'],
+      & input[type='datetime-local'],
+      & select,
+      & .text-editor .tiptap,
+      & .code-editor {
+        border-color: var(--color-notes);
+      }
+    }
   }
 }

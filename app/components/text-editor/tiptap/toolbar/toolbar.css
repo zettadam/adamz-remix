@@ -8,6 +8,7 @@
 
     & button,
     & li {
+      background-color: transparent;
       color: var(--neutral-400, hsl(0, 0%, 40%));
       &:hover {
         color: var(--neutral-300, hsl(0, 0%, 30%));

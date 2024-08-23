@@ -8,15 +8,13 @@
     -webkit-appearance: none;
     appearance: none;
     align-items: center;
-    background: none;
+    background-color: none;
     border: none;
     border-radius: 0;
     box-shadow: none;
     color: inherit;
     cursor: pointer;
     display: flex;
-    font-family: var(--font-sans-serif);
-    font-size: var(--text-size-1);
     padding: 0.125rem 0.5rem;
     text-align: inherit;
 
@@ -66,11 +64,16 @@
     margin: 0;
     padding: 0;
   }
+
+  button {
+    cursor: pointer;
+    font-family: var(--font-sans-serif);
+    font-size: var(--text-size-1);
+  }
 }
 
 @layer app {
   button {
-    cursor: pointer;
     &.primary {
       background-color: var(--color-primary);
       color: white;
@@ -275,11 +278,29 @@
         & input[type='text'],
         & input[type='number'],
         & input[type='date'],
-        & input[type='datetime-local'] {
-          font-family: var(--font-serif);
+        & input[type='datetime-local'],
+        & select,
+        & .text-editor .tiptap {
+          font-family: var(--font-sans-serif);
           font-size: var(--text-size-1);
           margin: 0;
           padding: 0.5rem;
+        }
+        & input[type='text'],
+        & input[type='number'],
+        & input[type='date'],
+        & input[type='datetime-local'],
+        & select,
+        & .text-editor .tiptap,
+        & .code-editor {
+          background-color: white;
+          border-radius: var(--radius-3);
+          border-style: solid;
+          border-width: 1px;
+        }
+        & .cm-editor,
+        & .cm-scroller {
+          border-radius: var(--radius-3);
         }
       }
 

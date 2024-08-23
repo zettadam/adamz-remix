@@ -11,13 +11,6 @@
       outline: 1px solid var(--color-posts);
     }
 
-    & input[type='text'],
-    & input[type='date'],
-    & input[type='datetime'],
-    & input[type='datetime-local'] {
-      border: 1px solid var(--color-posts);
-    }
-
     & a.create {
       background-color: var(--color-posts-a50);
       color: white;
@@ -33,6 +26,22 @@
         font-family: var(--font-sans-serif);
         font-size: var(--text-size-3);
         text-transform: uppercase;
+      }
+    }
+
+    & form {
+      & .label {
+        color: var(--color-posts);
+      }
+
+      & input[type='text'],
+      & input[type='number'],
+      & input[type='date'],
+      & input[type='datetime-local'],
+      & select,
+      & .text-editor .tiptap,
+      & .code-editor {
+        border-color: var(--color-posts);
       }
     }
   }
